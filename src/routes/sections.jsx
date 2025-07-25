@@ -98,7 +98,7 @@ export function Router () {
         { path: 'vendor-stock-management/current-stock', element: <CurrentStock /> },
         { path: 'vendor-stock-management/main-stock', element: <MainStock /> },
         { path: 'quality-control/quality-check', element: <QualityCheck /> },
-        { path: 'quality-control/qcparameters', element: <QCParameterTable /> },
+        // { path: 'quality-control/qcparameters', element: <QCParameterTable /> },
         { path: 'quality-control/rework', element: <Rework /> },
         {
           path: 'production-workflow/production-order-creation',
