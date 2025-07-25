@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: 'http://localhost:5000',
+  // baseURL: 'http://localhost:5000',
+  baseURL: 'https://erp-backend-6k0e.onrender.com' ,
   headers: {
     'Content-Type': 'application/json',
   }, 
