@@ -82,7 +82,8 @@ export function SignUpView () {
   )
 
   const renderForm = (
-    <Box display='flex' flexDirection='column' alignItems='flex-end'>
+  <Box display='flex' flexDirection='column' alignItems='flex-end'>
+    <form style={{ width: '100%' }} onSubmit={handleSignUp}>
       <TextField
         fullWidth
         onChange={e => setUserName(e.target.value)}
@@ -105,7 +106,6 @@ export function SignUpView () {
         value={email}
         sx={{ mb: 3 }}
       />
-
       <TextField
         fullWidth
         name='password'
@@ -162,19 +162,19 @@ export function SignUpView () {
         }}
         sx={{ mb: 3 }}
       />
-
       <LoadingButton
         fullWidth
         size='large'
         type='submit'
         color='inherit'
         variant='contained'
-        onClick={handleSignUp}
       >
         Sign up
       </LoadingButton>
-    </Box>
-  )
+    </form>
+  </Box>
+);
+
   if (step2) {
     return <OTPView email={email} />
   } else {
@@ -203,6 +203,7 @@ export function SignUpView () {
               Login here
             </ReactLink>
           </Typography>
+          
         </Box>
 
         {renderForm}
